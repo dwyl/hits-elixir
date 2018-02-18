@@ -4,6 +4,8 @@ defmodule App.WebsocketHandler do
   from the server to the clients
   """
 
+  alias App.WebsocketHandler
+
   @behaviour :cowboy_websocket_handler
 
   def init(_, _req, _opts) do
@@ -15,7 +17,7 @@ defmodule App.WebsocketHandler do
   """
   def websocket_init(_type, req, _opts) do
     state = %{}
-    App.WebsocketServer.join(self())
+    WebsocketServer.join(self())
     {:ok, req, state}
   end
 
@@ -40,7 +42,7 @@ defmodule App.WebsocketHandler do
   Websocket termination - just leave the WebsocketServer
   """
   def websocket_terminate(_reason, _req, _state) do
-    App.WebsocketServer.leave(self())
+    WebsocketServer.leave(self())
     :ok
   end
 

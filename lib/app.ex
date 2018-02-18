@@ -5,12 +5,13 @@ defmodule App do
   use Application
   require Logger
   alias App.Router, as: Router # credo requires this ... kinda pointless here.
+  alias Plug.Adapters.Cowboy
 
   def start(_type, _args) do
     port = Application.get_env(:app, :cowboy_port, 8080)
 
     children = [
-      Plug.Adapters.Cowboy.child_spec(:http, Router, [], [
+      Cowboy.child_spec(:http, Router, [], [
           dispatch: dispatch,
           port: port
         ]),

@@ -3,6 +3,7 @@ defmodule App.Hits do
   App.Hits contains all hits-related helper functions.
   """
   require Hash
+  alias App.{WebsocketServer, Utils}
 
   @doc """
   svg_badge_template/0 opens the SVG template file.
@@ -148,11 +149,11 @@ defmodule App.Hits do
   """
   def broadcast(svg_path, hash, count) do
 
-    time = App.Utils.now_to_string
+    time = Utils.now_to_string
     git_path = String.replace(svg_path, ".svg", "")
 
     msg = Enum.join([time, git_path, count, hash], " ")
 
-    App.WebsocketServer.broadcast(msg)
+    WebsocketServer.broadcast(msg)
   end
 end

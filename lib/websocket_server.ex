@@ -6,7 +6,6 @@ defmodule App.WebsocketServer do
 
   use GenServer
 
-
   @doc """
   Initialize the GenServer
   """
@@ -38,7 +37,7 @@ defmodule App.WebsocketServer do
     GenServer.cast(__MODULE__, {:notify_all, message})
   end
 
-  def init() do
+  def init do
     state = []
     {:ok, state}
   end
