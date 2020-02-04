@@ -24,7 +24,7 @@ defmodule App.Utils do
       |> zero_pad
     }"
   end
-  
+
   @spec zero_pad(Integer, Integer) :: String
   defp zero_pad(number, amount \\ 2) do
      number

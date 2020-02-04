@@ -14,16 +14,11 @@ defmodule App.Router do
   get("/", do: send_file(conn, 200, "lib/index.html"))
   get("/favicon.ico", do: send_file(conn, 200, "lib/favicon.ico"))
 
-  # catch all matcher
-  match _ do
-    cond do
-      # if url includes ".svg"
-      conn.request_path =~ ".svg" ->
-        render_badge(conn)
-
-      # cath all non .svg requests
-      true ->
-        send_resp(conn, 404, Enum.join(conn.path_info, "/"))
+  match _ do  # catch all matcher
+    if conn.request_path =~ ".svg" do
+      render_badge(conn)
+    else
+      send_resp(conn, 404, Enum.join(conn.path_info, "/"))
     end
   end
 
