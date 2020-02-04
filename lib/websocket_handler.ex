@@ -4,7 +4,7 @@ defmodule App.WebsocketHandler do
   from the server to the clients
   """
 
-  alias App.WebsocketHandler
+  alias App.WebsocketServer
 
   @behaviour :cowboy_websocket_handler
 

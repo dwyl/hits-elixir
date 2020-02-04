@@ -3,7 +3,7 @@ defmodule App.Hits do
   App.Hits contains all hits-related helper functions.
   """
   require Hash
-  alias App.{WebsocketServer, Utils}
+  alias App.WebsocketServer
 
   @doc """
   svg_badge_template/0 opens the SVG template file.

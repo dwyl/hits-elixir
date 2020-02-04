@@ -57,7 +57,7 @@ defmodule App.Mixfile do
 
   defp aliases do
     [
-      "cover": ["coveralls.json"],
+      cover: ["coveralls.json"],
       "cover.html": ["coveralls.html"]
     ]
   end
