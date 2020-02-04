@@ -12,7 +12,7 @@ defmodule App do
 
     children = [
       Cowboy.child_spec(:http, Router, [], [
-          dispatch: dispatch,
+          dispatch: dispatch(),
           port: port
         ]),
       App.WebsocketServer
