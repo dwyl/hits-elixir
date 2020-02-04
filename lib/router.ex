@@ -7,11 +7,12 @@ defmodule App.Router do
   import App.Hits
 
   # plug Plug.Logger
-  plug :match
-  plug :dispatch
+  plug(:match)
+  plug(:dispatch)
 
-  get "/", do: send_file(conn, 200, "lib/index.html") # serve html homepage
-  get "/favicon.ico", do: send_file(conn, 200, "lib/favicon.ico")
+  # serve html homepage
+  get("/", do: send_file(conn, 200, "lib/index.html"))
+  get("/favicon.ico", do: send_file(conn, 200, "lib/favicon.ico"))
 
   match _ do  # catch all matcher
     if conn.request_path =~ ".svg" do
@@ -23,15 +24,16 @@ defmodule App.Router do
 
   @doc """
   render_badge/1 renders the badge for the url requested in conn
-  
+
   ## Parameters
 
   - conn: Map the standard Plug.Conn info see: hexdocs.pm/plug/Plug.Conn.html
-  
+
   Returns Http response to end-user's browser with the svg (XML) of the badge.
   """
   def render_badge(conn) do
     count = save_hit(conn)
+
     conn
     |> put_resp_content_type("image/svg+xml")
     |> send_resp(200, make_badge(count))

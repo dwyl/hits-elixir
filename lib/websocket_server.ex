@@ -84,5 +84,4 @@ defmodule App.WebsocketServer do
   def handle_call({:clients_count}, _from, state) do
     {:reply, {:ok, Enum.count(state)}, state}
   end
-
 end
