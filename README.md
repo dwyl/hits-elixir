@@ -5,8 +5,8 @@
 <div align="center">
 
 [![Build Status](https://img.shields.io/travis/dwyl/hits-elixir/master.svg?style=flat-square)](https://travis-ci.org/dwyl/hits-elixir)
-[![Inline docs](http://inch-ci.org/github/dwyl/hits-elixir.svg?style=flat-square)](http://inch-ci.org/github/dwyl/hits-elixir)
-[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/hits-elixir/master.svg?style=flat-square)](http://codecov.io/github/dwyl/hits-elixir?branch=master)
+[![Inline docs](https://inch-ci.org/github/dwyl/hits-elixir.svg?style=flat-square)](https://inch-ci.org/github/dwyl/hits-elixir)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/hits-elixir/master.svg?style=flat-square)](https://codecov.io/github/dwyl/hits-elixir?branch=master)
 [![HitCount](https://hits.dwyl.com/dwyl/hits-elixir.svg?style=flat-square)](https://hits.dwyl.com/dwyl/hits-elixir)
 
 </div>
@@ -114,7 +114,7 @@ https://hexdocs.pm/plug/Plug.Conn.html
 + Elixir School Plug:
 https://elixirschool.com/en/lessons/specifics/plug/
 + Getting started with Plug in Elixir:
-http://www.brianstorti.com/getting-started-with-plug-elixir
+https://www.brianstorti.com/getting-started-with-plug-elixir
 (_has a good/simple example of "Plug.Builder"_)
 + Elixir Plug unveiled:
 https://medium.com/@kansi/elixir-plug-unveiled-bf354e364641
@@ -130,7 +130,7 @@ https://www.djm.org.uk/posts/cryptographic-hash-functions-elixir-generating-hex-
 ### Mix Tasks
 
 + How to create your own Mix Tasks:
-http://joeyates.info/2015/07/25/create-a-mix-task-for-an-elixir-project/
+https://joeyates.info/2015/07/25/create-a-mix-task-for-an-elixir-project/
 
 
 ### Compact sub-string syntax
@@ -142,7 +142,7 @@ iex> "1test2" =~ "test"
 true
 ```
 
-+ http://elixir-recipes.github.io/strings/checking-if-strings-contain-substring
++ https://elixir-recipes.github.io/strings/checking-if-strings-contain-substring
 
 ### Generate Random Strings in Elixir
 
@@ -165,4 +165,4 @@ iex> System.system_time(:millisecond)
 1504975995312
 ```
 
-+ http://michal.muskala.eu/2017/02/02/unix-timestamps-in-elixir-1-4.html
++ https://michal.muskala.eu/2017/02/02/unix-timestamps-in-elixir-1-4.html
